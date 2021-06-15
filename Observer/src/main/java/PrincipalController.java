@@ -1,12 +1,10 @@
 package main.java;
 
-import java.util.LinkedList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.paint.Color;
 
-public class PrincipalController implements Subject{
+public class PrincipalController{
 
     @FXML
     Button red_btn;
@@ -17,42 +15,20 @@ public class PrincipalController implements Subject{
     @FXML
     AnchorPane pane;
     
-    LinkedList<Observer> observers = new LinkedList<>();
-	String color="";
-    
-    public void changeToRed() {
-    	pane.setStyle("-fx-background-color: red;");
-    	color= "rojo";
-    }
-    public void changeToGreen() {
-    	pane.setStyle("-fx-background-color: green;");
-    	color= "verde";
-    }
-    public void changeToBlue() {
-    	pane.setStyle("-fx-background-color: blue;");
-    	color = "azul";
-    }
-    
-    public String getColor() {
-    	return this.color;
+    public String changeColor() {
+    	if(red_btn.isArmed()) {
+    		pane.setStyle("-fx-background-color: red;");
+    		return "rojo";
+    	}
+    	else if(blue_btn.isArmed()) {
+    		pane.setStyle("-fx-background-color: blue;");
+    		return "azul";
+    	}
+    	else if(green_btn.isArmed()) {
+    		pane.setStyle("-fx-background-color: green;");
+    		return "verde";
+    	}
+    	return "";
     }
     
-	@Override
-	public void add(Observer obs) {
-		observers.add(obs);
-		
-	}
-	
-	@Override
-	public void remove(Observer obs) {
-		observers.remove(obs);
-		
-	}
-	
-	@Override
-	public LinkedList getObservers() {
-		return observers;
-	}
-    
-	
 }

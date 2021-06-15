@@ -22,7 +22,7 @@
             </Label>
             <HBox prefHeight="400.0" prefWidth="600.0">
                <children>
-                  <Button fx:id="red_btn" mnemonicParsing="false" onAction="#changeToRed" prefHeight="90.0" prefWidth="180.0" text="Rojo">
+                  <Button fx:id="red_btn" mnemonicParsing="false" onAction="#changeColor" prefHeight="90.0" prefWidth="180.0" text="Rojo">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
@@ -30,7 +30,7 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="green_btn" mnemonicParsing="false" onAction="#changeToGreen" prefHeight="90.0" prefWidth="180.0" text="Verde">
+                  <Button fx:id="green_btn" mnemonicParsing="false" onAction="#changeColor" prefHeight="90.0" prefWidth="180.0" text="Verde">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
@@ -38,7 +38,7 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="blue_btn" mnemonicParsing="false" onAction="#changeToBlue" prefHeight="90.0" prefWidth="180.0" text="Azul">
+                  <Button fx:id="blue_btn" mnemonicParsing="false" onAction="#changeColor" prefHeight="90.0" prefWidth="180.0" text="Azul">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>

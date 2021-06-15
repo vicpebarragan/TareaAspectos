@@ -2,10 +2,10 @@ package main.java;
 
 public aspect Aspect {
 	
-	public pointcut cambiarColor(Subject s);
-	after(Subject s): cambiarColor(s){
-		System.out.println("color: "); // ahi va el color  
-	}
+	pointcut success(): execution(String changeColor());
 	
+	after() returning(String color): success() {
+    	System.out.println("Se ha cambiado el color a: "+color);
+    }
 
 }
