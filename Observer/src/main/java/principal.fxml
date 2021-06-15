@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -12,7 +13,7 @@
    <children>
       <VBox prefHeight="400.0" prefWidth="600.0">
          <children>
-            <Label alignment="CENTER" text="Ventana" textAlignment="CENTER">
+            <Label fx:id="label" alignment="CENTER" text="Ventana" textAlignment="CENTER">
                <font>
                   <Font size="30.0" />
                </font>
@@ -20,9 +21,9 @@
                   <Insets bottom="20.0" left="245.0" top="20.0" />
                </VBox.margin>
             </Label>
-            <HBox prefHeight="400.0" prefWidth="600.0">
+            <HBox prefHeight="119.0" prefWidth="600.0">
                <children>
-                  <Button fx:id="red_btn" mnemonicParsing="false" onAction="#changeColor" prefHeight="90.0" prefWidth="180.0" text="Rojo">
+                  <Button fx:id="red_btn" mnemonicParsing="false" onAction="#change" prefHeight="90.0" prefWidth="180.0" text="Rojo">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
@@ -30,7 +31,7 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="green_btn" mnemonicParsing="false" onAction="#changeColor" prefHeight="90.0" prefWidth="180.0" text="Verde">
+                  <Button fx:id="green_btn" mnemonicParsing="false" onAction="#change" prefHeight="90.0" prefWidth="180.0" text="Verde">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
@@ -38,7 +39,7 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="blue_btn" mnemonicParsing="false" onAction="#changeColor" prefHeight="90.0" prefWidth="180.0" text="Azul">
+                  <Button fx:id="blue_btn" mnemonicParsing="false" onAction="#change" prefHeight="90.0" prefWidth="180.0" text="Azul">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
@@ -48,6 +49,22 @@
                   </Button>
                </children>
             </HBox>
+            <RadioButton fx:id="color_btn" mnemonicParsing="false" text="Cambiar color">
+               <padding>
+                  <Insets left="220.0" top="20.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="label_btn" mnemonicParsing="false" text="Cambiar texto">
+               <padding>
+                  <Insets left="220.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </RadioButton>
          </children>
       </VBox>
    </children>

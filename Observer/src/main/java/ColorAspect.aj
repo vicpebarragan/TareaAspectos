@@ -1,6 +1,6 @@
 package main.java;
 
-public aspect Aspect {
+public aspect ColorAspect {
 	
 	pointcut success(): execution(String changeColor());
 	
