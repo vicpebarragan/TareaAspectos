@@ -1,11 +1,10 @@
 package main.java;
 
-import java.io.IOException;
 import java.util.LinkedList;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 
 public class PrincipalController implements Subject{
 
@@ -19,15 +18,23 @@ public class PrincipalController implements Subject{
     AnchorPane pane;
     
     LinkedList<Observer> observers = new LinkedList<>();
+	String color="";
     
     public void changeToRed() {
     	pane.setStyle("-fx-background-color: red;");
+    	color= "rojo";
     }
     public void changeToGreen() {
     	pane.setStyle("-fx-background-color: green;");
+    	color= "verde";
     }
     public void changeToBlue() {
     	pane.setStyle("-fx-background-color: blue;");
+    	color = "azul";
+    }
+    
+    public String getColor() {
+    	return this.color;
     }
     
 	@Override
